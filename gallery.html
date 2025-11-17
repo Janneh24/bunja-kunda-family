@@ -1,117 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Bunja Kunda Family</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - Bunja Kunda Family</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="top-contact-bar">
 
-    <a href="https://www.facebook.com/profile.php?id=100080078953592" 
-       target="_blank" 
-       class="top-icon">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" 
-             alt="Facebook">
+<div class="top-icons">
+    <a href="https://www.facebook.com/profile.php?id=100080078953592" target="_blank" class="icon-link">
+        <i class="fab fa-facebook"></i>
     </a>
-
-    <a href="mailto:bunjakundafamily100@gmail.com" class="top-icon">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/New_Logo_Gmail.svg" 
-             alt="Email">
+    <a href="mailto:bunjakundafamily100@gmail.com" class="icon-link">
+        <i class="fas fa-envelope"></i>
     </a>
-
 </div>
 
-<!-- Header -->
-<header>
-    <div class="navbar">
-        <h1>
-            <img src="logo.jpeg" alt="Bunja Kunda Family Logo" style="height:50px; vertical-align:middle; margin-right:10px;">
-            Bunja Kunda Family
-        </h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </div>
-</header>
+<div class="navbar">
+    <h1>
+        <img src="logo.jpeg" alt="Bunja Kunda Family Logo" style="height:45px; margin-right:10px;">
+        Bunja Kunda Family
+    </h1>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</div>
 
 <section class="container">
     <h2>Gallery</h2>
-
-    <!-- Family Meetings -->
-    <h3>Family Meetings</h3>
     <div class="gallery">
         <div class="gallery-item">
             <img src="fam1.jpg" alt="Meeting at Fa Sherrif Kunda">
             <div class="caption">Meeting at Fa Sherrif Kunda</div>
         </div>
         <div class="gallery-item">
-            <img src="event2.jpg" alt="Meeting at Fa Mbomo Kunda">
-            <div class="caption">Meeting at Fa Mbomo Kunda</div>
+            <img src="fam5.jpg" alt="Cleaning Exercise at Gunjur Hospital">
+            <div class="caption">Cleaning Exercise at Gunjur Hospital – Jan 5, 2023</div>
         </div>
         <div class="gallery-item">
-            <img src="event3.jpg" alt="Meeting at Fa Mbomo Kunda">
-            <div class="caption">Meeting at Fa Mbomo Kunda</div>
+            <img src="fam7.jpg" alt="Cleaning Exercise at Gunjur Hospital">
+            <div class="caption">Cleaning Exercise at Gunjur Hospital – Sep 16, 2023</div>
         </div>
         <div class="gallery-item">
-            <img src="fam4.jpg" alt="Family Meeting at Fa Nyakaba Kunda">
-            <div class="caption">Family Meeting at Fa Nyakaba Kunda</div>
-        </div>
-    </div>
-
-    <!-- Community Service -->
-    <h3>Community Service – Health Center</h3>
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="fam5.jpg" alt="Cleaning Exercise at Gunur Health Center – January 5, 2023">
-            <div class="caption">Cleaning Exercise at Gunjur Health Center – January 5, 2023</div>
-        </div>
-        <div class="gallery-item">
-            <img src="fam7.jpg" alt="Cleaning Exercise at Gunjur Health Center – September 16, 2023">
-            <div class="caption">Cleaning Exercise at Gunjur Health Center – September 16, 2023</div>
-        </div>
-        <div class="gallery-item">
-            <img src="fam8.jpg" alt="Cleaning Exercise at Gunjur Health Center – October 20, 2023">
-            <div class="caption">Cleaning Exercise at Gunjur Health Center – October 20, 2025</div>
-        </div>
-    </div>
-
-    <!-- Special Items -->
-    <h3>Special Items</h3>
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="fam10.jpeg" alt="Family T-shirt">
-            <div class="caption">Family T-shirt</div>
+            <img src="fam8.jpg" alt="Cleaning Exercise at Gunjur Hospital">
+            <div class="caption">Cleaning Exercise at Gunjur Hospital – Oct 20, 2023</div>
         </div>
     </div>
 </section>
-<section class="contact-details-section">
-    <h2>Contact Details</h2>
+
+<section class="contact-details">
     <p>📍 Gunjur, Kombo South District, The Gambia</p>
     <p>📞 +2207000048 / +2203058738</p>
     <p>✉️ bunjakundafamily100@gmail.com</p>
 </section>
 
-
-<!-- Footer -->
 <footer>
-    <img src="logo.jpeg" alt="Bunja Kunda Family Logo" style="height:40px; margin-bottom:10px;">
     <p>&copy; 2025 Bunja Kunda Family Association</p>
-    <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=100080078953592" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-    </div>
 </footer>
 
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>

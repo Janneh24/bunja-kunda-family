@@ -7,40 +7,64 @@ body {
     background-color: #fff;
 }
 
+/* Top Icons */
+.top-icons {
+    display: flex;
+    gap: 15px;
+    padding: 10px 20px;
+    background-color: #00adb5;
+}
+
+.top-icons .icon-link {
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.top-icons .icon-link:hover {
+    color: #ffe500;
+}
+
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
     background-color: #00adb5;
     color: #fff;
+    padding: 15px 20px;
     position: relative;
-    z-index: 1000; /* ensures links are clickable above hero */
 }
 
 .navbar h1 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     display: flex;
     align-items: center;
 }
 
-.navbar h1 img {
-    height: 50px;
-    vertical-align: middle;
-    margin-right: 10px;
+/* Desktop Menu */
+nav {
+    display: flex;
+    gap: 20px;
 }
 
-.navbar nav a {
-    margin-left: 20px;
-    color: #fff;
+nav a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.navbar nav a:hover {
+nav a:hover {
     color: #ffe500;
+}
+
+/* Hamburger Icon (hidden on desktop) */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
 }
 
 /* Hero Section */
@@ -155,6 +179,18 @@ footer {
     margin-top: 40px;
 }
 
+/* Contact Details Section before Footer */
+.contact-details {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
 /* Contact Form Styles */
 form {
     display: flex;
@@ -198,12 +234,6 @@ form button {
 
 form button:hover {
     background-color: #007a86;
-}
-
-/* Contact page heading */
-.container h2 {
-    text-align: center;
-    margin-bottom: 25px;
 }
 
 /* Service Cards */
@@ -311,44 +341,40 @@ form button:hover {
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-/* Mobile Responsiveness */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
-
-    /* Navbar */
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 15px;
-    }
-
+    /* Hamburger menu */
     .navbar h1 {
-        font-size: 1.2em;
+        font-size: 1.1em;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #007a86;
+        width: 100%;
+        padding: 10px 0;
+        position: absolute;
+        top: 70px;
+        left: 0;
         text-align: center;
     }
 
-    .navbar h1 img {
-        height: 40px;
-        margin-right: 5px;
-        margin-bottom: 5px;
+    nav a {
+        padding: 10px 0;
+        display: block;
+        width: 100%;
     }
 
-    .navbar nav {
-        margin-top: 10px;
+    nav.show {
+        display: flex;
     }
 
-    .navbar nav a {
-        margin-left: 10px;
-        font-size: 0.9em;
-    }
-
-    /* Hero Section */
-    .hero {
-        font-size: 1.5em;
-        height: 300px;
-        text-align: center;
-    }
-
-    /* About Page */
+    /* About section stacking */
     .about-message {
         flex-direction: column;
         align-items: center;
@@ -358,106 +384,13 @@ form button:hover {
         flex: 1 1 100%;
     }
 
-    /* Gallery */
+    /* Gallery responsive */
     .gallery-item {
         width: 100%;
-        max-width: 300px;
     }
 
-    /* Service Cards */
     .cards {
         flex-direction: column;
         align-items: center;
-    }
-}
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icons a img {
-    transition: transform 0.3s;
-}
-
-.social-icons a img:hover {
-    transform: scale(1.1);
-}
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icons a {
-    color: #fff; /* or #1877f2 for Facebook blue */
-    font-size: 24px;
-    margin: 0 5px;
-    transition: transform 0.3s;
-}
-
-.social-icons a:hover {
-    transform: scale(1.2);
-    color: #1877f2; /* Facebook hover color */
-}
-/* Contact Details Section */
-.contact-details-section {
-    background: #f4f4f4;
-    padding: 30px 20px;
-    text-align: center;
-    border-top: 3px solid #333;
-    border-bottom: 3px solid #333;
-}
-
-.contact-details-section h2 {
-    font-size: 26px;
-    margin-bottom: 15px;
-    color: #222;
-    font-weight: bold;
-}
-
-.contact-details-section p {
-    font-size: 18px;
-    margin: 6px 0;
-    color: #444;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    .contact-details-section h2 {
-        font-size: 22px;
-    }
-
-    .contact-details-section p {
-        font-size: 16px;
-    }
-}
-/* Top Bar */
-.top-contact-bar {
-    width: 100%;
-    background-color: #222;
-    padding: 8px 15px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-    align-items: center;
-}
-
-.top-contact-bar .top-icon img {
-    width: 28px;
-    height: 28px;
-    transition: 0.3s ease;
-}
-
-.top-contact-bar .top-icon img:hover {
-    transform: scale(1.15);
-}
-
-/* Mobile responsiveness */
-@media (max-width: 600px) {
-    .top-contact-bar {
-        justify-content: center;
-        padding: 10px 0;
-    }
-
-    .top-contact-bar .top-icon img {
-        width: 25px;
-        height: 25px;
     }
 }
