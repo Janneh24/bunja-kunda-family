@@ -370,3 +370,14 @@ form button:hover {
         align-items: center;
     }
 }
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
