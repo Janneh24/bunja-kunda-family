@@ -394,3 +394,48 @@ form button:hover {
         align-items: center;
     }
 }
+/* Navbar Menu */
+.navbar nav {
+    display: flex;
+    gap: 20px;
+}
+
+/* Hamburger menu for mobile */
+.menu-icon {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar nav {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* hide menu by default */
+        margin-top: 10px;
+    }
+
+    .navbar nav.show {
+        display: flex; /* show when toggled */
+    }
+
+    .navbar nav a {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block; /* show hamburger icon */
+    }
+
+    .top-icons {
+        justify-content: flex-start; /* optional: align top icons on small screens */
+        gap: 15px;
+        padding: 10px 20px;
+    }
+}
