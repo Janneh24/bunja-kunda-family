@@ -396,3 +396,68 @@ form button:hover {
     transform: scale(1.2);
     color: #1877f2; /* Facebook hover color */
 }
+/* Contact Details Section */
+.contact-details-section {
+    background: #f4f4f4;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 3px solid #333;
+    border-bottom: 3px solid #333;
+}
+
+.contact-details-section h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #222;
+    font-weight: bold;
+}
+
+.contact-details-section p {
+    font-size: 18px;
+    margin: 6px 0;
+    color: #444;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .contact-details-section h2 {
+        font-size: 22px;
+    }
+
+    .contact-details-section p {
+        font-size: 16px;
+    }
+}
+/* Top Bar */
+.top-contact-bar {
+    width: 100%;
+    background-color: #222;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    align-items: center;
+}
+
+.top-contact-bar .top-icon img {
+    width: 28px;
+    height: 28px;
+    transition: 0.3s ease;
+}
+
+.top-contact-bar .top-icon img:hover {
+    transform: scale(1.15);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .top-contact-bar {
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .top-contact-bar .top-icon img {
+        width: 25px;
+        height: 25px;
+    }
+}
