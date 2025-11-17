@@ -148,6 +148,7 @@ footer {
     padding: 20px;
     margin-top: 40px;
 }
+
 /* Contact Form Styles */
 form {
     display: flex;
@@ -199,12 +200,6 @@ form button:hover {
     margin-bottom: 25px;
 }
 
-/* Optional: responsive */
-@media (max-width: 768px) {
-    form {
-        padding: 20px;
-    }
-}
 /* Service Cards */
 .cards {
     display: flex;
@@ -244,17 +239,16 @@ form button:hover {
     font-weight: bold;
     margin-top: 10px;
 }
+
 /* Gallery */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center;
     margin-top: 20px;
 }
 
 .gallery-item {
-    width: 250px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
@@ -279,6 +273,7 @@ form button:hover {
     color: #333;
     background-color: #f4f4f4;
 }
+
 /* About Page */
 .about-message {
     display: flex;
@@ -307,7 +302,47 @@ form button:hover {
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .hero {
+        font-size: 1.8em;
+    }
+}
+
 @media (max-width: 768px) {
+    /* Navbar responsive */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .navbar nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar nav a {
+        margin: 5px 0;
+    }
+
+    /* Hero section responsive */
+    .hero {
+        height: 250px;
+        font-size: 1.5em;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /* Contact form padding */
+    form {
+        padding: 20px;
+    }
+
+    /* About section responsive */
     .about-message {
         flex-direction: column;
         align-items: center;
@@ -315,5 +350,19 @@ form button:hover {
 
     .about-text, .about-image {
         flex: 1 1 100%;
+    }
+
+    .about-image img {
+        margin-top: 15px;
+    }
+
+    /* Service cards responsive */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
     }
 }
