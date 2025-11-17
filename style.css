@@ -381,3 +381,18 @@ form button:hover {
 .social-icons a img:hover {
     transform: scale(1.1);
 }
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff; /* or #1877f2 for Facebook blue */
+    font-size: 24px;
+    margin: 0 5px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #1877f2; /* Facebook hover color */
+}
