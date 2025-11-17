@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunja Kunda Family</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="navbar">
+        <h1>
+            <img src="logo.jpeg" alt="Bunja Kunda Family Logo" style="height:50px; vertical-align:middle; margin-right:10px;">
+            Bunja Kunda Family
+        </h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h2>Welcome to the Bunja Kunda Family</h2>
+</section>
+
+<!-- Community Service Slideshow -->
+<section class="container">
+    <h2>Community Service – Hospital Cleaning</h2>
+    <div class="slideshow-container">
+
+        <div class="slide fade">
+            <img src="fam5.jpg" alt="Cleaning Exercise at Gunjur Hospital">
+            <div class="slide-caption">Cleaning Exercise at Gunjur Hospital – January 5, 2023</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="fam7.jpg" alt="Cleaning Exercise at Gunjur Hospital">
+            <div class="slide-caption">Cleaning Exercise at Gunjur Hospital – September 16, 2023</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="fam8.jpg" alt="Cleaning Exercise at Gunjur Hospital">
+            <div class="slide-caption">Cleaning Exercise at Gunjur Hospital – October 20, 2023</div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Dots -->
+    <div style="text-align:center; margin-top: 10px;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <img src="logo.jpeg" alt="Bunja Kunda Family Logo" style="height:40px; margin-bottom:10px;">
+    <p>&copy; 2025 Bunja Kunda Family Association</p>
+</footer>
+
+<!-- Slideshow JavaScript -->
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+}
+
+// Automatic slideshow every 5 seconds
+setInterval(() => { plusSlides(1); }, 5000);
+</script>
+
+</body>
+</html>
