@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact – Bunja Kunda Family</title>
+<title>Contact - Bunja Kunda Family</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -28,33 +28,34 @@
 <!-- Contact Form Section -->
 <section class="container">
     <h2>Contact Us</h2>
-    <form action="mailto:bunjakundafamily100@gmail.com" method="post" enctype="text/plain">
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="f796aa71-2a5f-4f84-8212-cd4aaf45334c">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
     </form>
 </section>
 
-<!-- Contact Details & Footer -->
+<!-- Contact Details -->
 <section class="contact-details">
     <p>📍 Gunjur, Kombo South District, The Gambia</p>
     <p>📞 +2207000048 / +2203058738</p>
     <p>✉️ bunjakundafamily100@gmail.com</p>
 </section>
 
-<footer class="footer">
-    <div class="footer-container">
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=100080078953592" target="_blank">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="mailto:bunjakundafamily100@gmail.com">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
-        <p>© 2025 Bunja Kunda Family. All Rights Reserved.</p>
+<!-- Footer -->
+<footer style="background:#333; color:white; text-align:center; padding:20px 0;">
+    <img src="logo.jpeg" alt="Bunja Kunda Family Logo" style="height:40px; margin-bottom:10px;">
+    <div class="social-icons" style="margin:10px 0;">
+        <a href="https://www.facebook.com/profile.php?id=100080078953592" target="_blank" style="color:white; font-size:24px; margin:0 10px;">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="mailto:bunjakundafamily100@gmail.com" style="color:white; font-size:24px; margin:0 10px;">
+            <i class="fas fa-envelope"></i>
+        </a>
     </div>
+    <p>&copy; 2025 Bunja Kunda Family Association</p>
 </footer>
 
 </body>
