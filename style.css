@@ -1,302 +1,24 @@
-/* ================================
-   GENERAL STYLES
-================================ */
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
-}
-
-/* ================================
-   TOP ICONS (Facebook + Email)
-================================ */
-.top-icons {
-    display: flex;
-    gap: 15px;
-    padding: 10px 20px;
-    background-color: #00adb5;
-    align-items: center;
-}
-
-.top-icons .icon-link {
-    color: white;
-    font-size: 22px;
-    text-decoration: none;
-}
-
-.top-icons .icon-link:hover {
-    color: #ffe500;
-}
-
-/* ================================
-   NAVBAR (NO HAMBURGER MENU)
-================================ */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #00adb5;
-    color: #fff;
-    padding: 15px 20px;
-    flex-wrap: wrap;
-}
-
-.navbar h1 {
-    font-size: 1.3em;
-    display: flex;
-    align-items: center;
-}
-
-/* Always visible menu */
-.navbar nav {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.navbar nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.navbar nav a:hover {
-    color: #ffe500;
-}
-
-/* Remove hamburger icon */
-.menu-icon {
-    display: none !important;
-}
-
-/* ================================
-   HERO SECTION
-================================ */
-.hero {
-    height: 400px;
-    background-image: url('fam1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 2em;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
-}
-
-/* ================================
-   MAIN CONTENT CONTAINER
-================================ */
-.container {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* ================================
-   SLIDESHOW
-================================ */
-.slideshow-container {
-    position: relative;
-    max-width: 900px;
-    margin: 20px auto;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.slide {
-    display: none;
-}
-
-.slide img {
-    width: 100%;
-    display: block;
-    border-radius: 15px;
-}
-
-.slide-caption {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 8px;
-    font-size: 0.95em;
-    text-align: center;
-    max-width: 90%;
-}
-
-/* Arrows */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    padding: 12px;
-    color: #fff;
-    font-size: 24px;
-    background-color: rgba(0,0,0,0.4);
-    border-radius: 5px;
-    user-select: none;
-    transition: 0.3s;
-}
-
-.next { right: 0; }
-
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-/* Dots */
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.active, .dot:hover {
-    background-color: #00adb5;
-}
-
-/* ================================
-   CONTACT DETAILS (Before Footer)
-================================ */
-.contact-details {
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
-    font-size: 1em;
-}
-
-.contact-details p {
-    margin: 5px 0;
-}
-
-/* ================================
-   FOOTER
-================================ */
-footer {
-    background-color: #00adb5;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-/* ================================
-   CONTACT FORM
-================================ */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 20px auto;
-    gap: 15px;
-    background-color: #f4f4f4;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-form input,
-form textarea {
-    padding: 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-form button {
-    padding: 12px;
-    background-color: #00adb5;
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-}
-
-form button:hover {
-    background-color: #007a86;
-}
-
-/* ================================
-   SERVICE CARDS
-================================ */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.card {
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 12px;
-    max-width: 300px;
-    text-align: center;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* ================================
-   GALLERY
-================================ */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.gallery-item {
-    width: 250px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.gallery-item img {
-    width: 100%;
-    display: block;
-}
-
-.gallery-item .caption {
-    padding: 10px;
-    text-align: center;
-    background-color: #f4f4f4;
-}
-
-/* ================================
-   ABOUT PAGE
-================================ */
+/* ABOUT PAGE */
 .about-message {
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
+    margin-top: 30px;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .about-text {
     flex: 1 1 400px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
 }
 
 .about-image {
     flex: 1 1 300px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .about-image img {
@@ -305,26 +27,127 @@ form button:hover {
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-/* ================================
-   MOBILE RESPONSIVE
-================================ */
+/* SERVICES PAGE */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #00adb5;
+}
+
+.card p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* CONTACT FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+    gap: 15px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+form input, form textarea {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #00adb5;
+    box-shadow: 0 0 5px rgba(0,173,181,0.5);
+}
+
+form button {
+    padding: 12px;
+    background: #00adb5;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #007a86;
+}
+
+/* GALLERY PAGE (KEEP ARRANGEMENT) */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 250px; /* keep original arrangement */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+.gallery-item .caption {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    background: #f4f4f4;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-
-    .navbar {
+    .about-message {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
-
-    .navbar nav {
-        flex-direction: column;
-        width: 100%;
-        gap: 12px;
-        margin-top: 10px;
-        text-align: center;
-    }
-
-    .gallery-item {
-        width: 100%;
+    
+    .about-text, .about-image {
+        flex: 1 1 100%;
     }
 
     .cards {
@@ -332,8 +155,17 @@ form button:hover {
         align-items: center;
     }
 
-    .about-message {
-        flex-direction: column;
-        text-align: center;
+    .gallery-item {
+        width: 100%; /* full width on mobile but keeps stacking */
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
 }

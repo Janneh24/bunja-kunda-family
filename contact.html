@@ -3,22 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - Bunja Kunda Family</title>
+<title>Contact – Bunja Kunda Family</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<div class="top-icons">
-    <a href="https://www.facebook.com/profile.php?id=100080078953592" target="_blank" class="icon-link">
-        <i class="fab fa-facebook"></i>
-    </a>
-    <a href="mailto:bunjakundafamily100@gmail.com" class="icon-link">
-        <i class="fas fa-envelope"></i>
-    </a>
-</div>
-
+<!-- Navbar -->
 <div class="navbar">
     <h1>
         <img src="logo.jpeg" alt="Bunja Kunda Family Logo" style="height:45px; margin-right:10px;">
@@ -33,61 +25,37 @@
     </nav>
 </div>
 
+<!-- Contact Form Section -->
 <section class="container">
     <h2>Contact Us</h2>
-    <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="f796aa71-2a5f-4f84-8212-cd4aaf45334c">
+    <form action="mailto:bunjakundafamily100@gmail.com" method="post" enctype="text/plain">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
     </form>
 </section>
 
+<!-- Contact Details & Footer -->
 <section class="contact-details">
     <p>📍 Gunjur, Kombo South District, The Gambia</p>
     <p>📞 +2207000048 / +2203058738</p>
     <p>✉️ bunjakundafamily100@gmail.com</p>
 </section>
-<!-- FOOTER -->
-<footer class="footer" style="background:#333; color:white; padding:20px 0; margin-top:40px;">
 
-  <div class="footer-container" style="
-      max-width:1200px; 
-      margin:auto; 
-      display:flex; 
-      flex-direction:column; 
-      align-items:center; 
-      text-align:center;
-  ">
-
-      <h3 style="margin-bottom:10px;">Contact Details</h3>
-
-      <p style="margin:5px 0;">📍 Gunjur, Kombo South District, The Gambia</p>
-      <p style="margin:5px 0;">📞 +2207000048 / +2203058738</p>
-      <p style="margin:5px 0;">✉️ bunjakundafamily100@gmail.com</p>
-
-      <!-- Social Icons -->
-      <div class="social-icons" style="margin-top:12px; display:flex; gap:20px;">
-
-          <!-- Facebook icon -->
-          <a href="https://facebook.com" target="_blank" style="color:white; font-size:24px;">
-              <i class="fa fa-facebook"></i>
-          </a>
-
-          <!-- Email icon -->
-          <a href="mailto:bunjakundafamily100@gmail.com" style="color:white; font-size:24px;">
-              <i class="fa fa-envelope"></i>
-          </a>
-
-      </div>
-
-      <p style="margin-top:15px; font-size:14px;">© 2025 Bunjakunda Family. All Rights Reserved.</p>
-  </div>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100080078953592" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="mailto:bunjakundafamily100@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <p>© 2025 Bunja Kunda Family. All Rights Reserved.</p>
+    </div>
 </footer>
-
-
-
 
 </body>
 </html>
