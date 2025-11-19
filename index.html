@@ -26,7 +26,6 @@
         <img src="logo.jpeg" alt="Bunja Kunda Family Logo" style="height:45px; margin-right:10px;">
         Bunja Kunda Family
     </h1>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
     <nav id="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -97,10 +96,6 @@ function showSlides(n){
     dots[slideIndex-1].className+=" active";
 }
 setInterval(()=>{plusSlides(1);},5000);
-
-function toggleMenu(){
-    document.getElementById("menu").classList.toggle("show");
-}
 </script>
 
 </body>
